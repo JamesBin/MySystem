@@ -22,7 +22,7 @@
 
     <!--通知spring使用cglib而不是jdk的来生成代理方法 AOP可以拦截到Controller-->
     <aop:aspectj-autoproxy proxy-target-class="true" />
-    <context:component-scan base-package="com.hgsoft.yfzx.*.*.web.controller"/>
+    <context:component-scan base-package="org.personal.webapp.*.*.web.controller"/>
     <!--此处需要扫描quartz的controller-->
     <!--<context:component-scan base-package="com.hgsoft.yfzx.webapp.*.web.controller" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
@@ -97,18 +97,5 @@
             <ref bean="pageIntercept" />
         </mvc:interceptor>
     </mvc:interceptors>
-
-<!--    <mvc:cors>
-        <mvc:mapping path="/api/v1/**"
-                     allowed-origins="http://gift.hgits.cn:99,http://10.173.230.72:99,http://localhost:99,http://10.173.235.230:99,http://10.173.232.48:99"
-                     allowed-methods="GET, POST, PUT, DELETE, OPTIONS"
-                     allowed-headers="origin, content-type, accept, x-requested-with"
-                     allow-credentials="true"
-                     max-age="1800" />
-        &lt;!&ndash;exposed-headers="origin, content-type, accept, x-requested-with1"&ndash;&gt;
-
-        &lt;!&ndash;<mvc:mapping path="/resources/**"
-                     allowed-origins="http://domain1.com" />&ndash;&gt;
-    </mvc:cors>-->
 
 </beans>
